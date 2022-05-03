@@ -5,14 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- CSS -->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./index.css">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/moneyWebApp.css">
     <!-- / CSS -->
 
-    <title>Firebase</title>
+    <title>moneywebapp</title>
+
+    <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/ce27987ac1.js" crossorigin="anonymous"></script>
+    <!-- / fontawesome -->
     <!-- load from another page -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script> 
@@ -25,112 +28,135 @@
     <!-- / load from another page -->
   </head>
   <body>
-	<!-- <button class="addData">Add data</button> -->
-	<div class="kontainer">
-		<div class="slider">
-			<img src="./img/venturer.jpg">
-			<img src="./img/venturer.jpg">
-			<img src="./img/venturer.jpg">
-			<img src="./img/venturer.jpg">
-			<img src="./img/venturer.jpg">
-			
+    <!-- <input class="input"><br><br> -->
+    <div class="wrapA">
+		<p></p>
+		<input type="month" name="" id="month">
+		<!-- <input type="date" name="" id="month"> -->
+		<!-- <input class="coba" type="submit" value="submit2">  -->
+		<p></p>
+    </div>
+		<div class="sectionB">
+			<!-- <div class="wrapB1">
+				<p>kartu kredit</p>
+				<p>Rp. 150.000</p>
+				<p>deskripsi belanjaan, deskripsi belanjaanadad, deskripsi belanjaan, deskripsi belanjaan</p>
+				<p>11/03/2021</p>
+			</div> -->
 		</div>
-		<div class="tombol">
-			<div class="kanan"></div>
-			<div class="kiri"></div>
+		<p class="judul-angsuran">
+			Angsuran
+		</p>
+		<div class="sectionB angsuran">
+			<!-- <div class="wrapB1">
+				<p>kartu kredit</p>
+				<p>Rp. 150.000</p>
+				<p>deskripsi belanjaan, deskripsi belanjaanadad, deskripsi belanjaan, deskripsi belanjaan</p>
+				<p>11/03/2021</p>
+			</div> -->
 		</div>
-	</div>
-	<!-- <div class="jajal">
-		<h1>hello world</h1>
-		<h1>hello world</h1>
-		<h1>hello world</h1>
-	</div> -->
-	
-	<script>
-		let img1 = document.querySelectorAll('.slider img');
-		let tombol = document.querySelectorAll('.tombol div');
-		let jmlImg = img1.length;
-		let val1=0;
-		let val2=1500;
-		let margin=jmlImg * -100;
-		let int2=function(a){
-			if(val1==margin+100){
-				val1=100;
-			};
-			val1+=-100;
-			img1[0].classList.add('slides');
-			img1[0].style.marginLeft= val1+'%';
-		};
-		// let h1Bru=document.createElement('img');
-		// let texth1 = img1[0].getAttribute('src');
-		// h1Bru.setAttribute('src',texth1);
-		// let tulis = document.querySelector('.jajal');
-		// let apus = document.querySelectorAll('.jajal h1');
-		// tulis.appendChild(h1Bru);
-		// apus[0].remove();
+		<div class="wrapB2">
+			<button class="close">X</button>
+			<button class="edit">EDIT</button>
+			<button class="delete">DELETE</button>
+		</div>
+		<div class="b3">
+			<input type="number" id="passcode" placeholder="Passcode">
+			<button class="passcode">DELETE</button>
+		</div>
+		<div class="sectionD">
+			<!-- <div class="wrapD1 cimb">
+			</div>
+			<div class="wrapD1 mega">
+
+			</div>
+			<div class="wrapD1 gopaylatter">
+
+			</div>
+			<div class="wrapD1 sPaylatter">
+
+			</div>
+			<div class="wrapD1 ovo">
+
+			</div>
+			<div class="wrapD1 debit">
+				
+			</div> -->
+		</div>
 		
-		let int3 = function(){
-			img1[0].classList.add('slides');
-			if (val1==0){
-				val1=margin+100;
-			}else{
-				val1+=100
-	
-			};
-			img1[0].style.marginLeft= val1+'%';
-			console.log(val1);
-			
-		}
+		<div class="sectionC">
+			<div class="wrapC">
+				<form action="" method="get">
+					<div class="form-group">
+						<label for="pembayaran"></label>
+						<select class="form-control" id="pembayaran">
+							<option value="cimb">cimb</option>
+							<option value="mega">mega</option>
+							<option value="gopayLatter">gopayLatter</option>
+							<option value="sPaylatter">sPaylatter</option>
+							<option value="ovo">ovo</option>
+							<option value="debit">debit</option>
+						</select>
+					</div>
+					<input type="date" id="tanggal">
+					<!-- <label for="harga">Harga</label> -->
+					<input type="number" id="harga" name="harga" placeholder=" Harga">
+					<!-- <label for="deskripsi">deskripsi</label> -->
+					<input type="text" id="deskripsi" name="deskripsi" placeholder=" Deskripsi">
+					<!-- <label for="dateAngsuran">tanggal mulai angsuran</label>
+					<input type="date" id="dateAngsuran"> -->
+					<input type="number" id="lamaAngsuran" placeholder="tenor(bulan)" min="2" max="36">
+					<div class="wrapC2">
+						<input class="cancel" id="C2cancel" type="submit" value="cancel"></input>
+						<input class="submit" type="submit" value="Submit">
+					</div>
+				</form>
+			</div>
+		</div>
 
-		let int=setInterval(int2,val2);
-		tombol[0].parentElement.addEventListener('mouseenter',()=>{
-			clearInterval(int);
-			console.log(val1);
-		});
-		tombol[0].parentElement.addEventListener('mouseleave',()=>{
-			int=setInterval(int2,val2);
-		});
-		let tMove;
-		tombol[0].parentElement.addEventListener('touchmove',(e)=>{
-			// int=setInterval(int2,val2);
-			tMove = e.touches[0].screenX;
-		});
-		let tStart;
-		tombol[0].parentElement.addEventListener('touchstart',(e)=>{
-			// int=setInterval(int2,val2);
-			// console.log(e.touches[0].screenX);
-			tStart = e.touches[0].screenX;
-			clearInterval(int);
-		});
+		<div class="sectionE edit">
+			<div class="wrapE edit">
+				<form action="" method="get">
+					<p>EDIT</p>
+					<div class="form-group">
+						<label for="pembayaran"></label>
+						<select class="form-control" id="pembayaranEdit">
+							<option value="cimb">cimb</option>
+							<option value="mega">mega</option>
+							<option value="gopayLatter">gopayLatter</option>
+							<option value="sPaylatter">sPaylatter</option>
+							<option value="ovo">ovo</option>
+							<option value="debit">debit</option>
+						</select>
+					</div>
+					<input type="date" id="tanggalEdit">
+					<!-- <label for="harga">Harga</label> -->
+					<input type="number" id="hargaEdit" name="harga" placeholder=" Harga">
+					<!-- <label for="deskripsi">deskripsi</label> -->
+					<input type="text" id="deskripsiEdit" name="deskripsi" placeholder=" Deskripsi">
+					<!-- <input type="number" id="lamaAngsuranEdit" placeholder="tenor(bulan)" min="2" max="36"> -->
+					<div class="wrapE2 edit">
+						<input class="canceledit" type="button" value="cancel">
+						<input class="saveedit" type="submit" value="Save">
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/C0mPB-lyI1I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 		
-		tombol[0].parentElement.addEventListener('touchend',()=>{
-			// int=setInterval(int2,val2);
-			console.log(tStart - tMove);
-			if(tStart - tMove>0){
-				val1+=-100;
-				if(val1==margin){
-					val1=0
-				};
-				img1[0].style.marginLeft= val1+'%';
-			}else if(tStart - tMove<0){
-				val1+=100;
-				if(val1==0){
-					val1=margin+100
-				};
-				img1[0].style.marginLeft= val1+'%';
-			};
-		});
+		<!-- <div id="loadingPage">
+			<h2>L O A D I N G</h2>
+			<div class="banner">
+				<div class="blocks"></div>
+			</div>
+		</div> -->
+
+		<button class="addData"><i class="fas fa-cart-plus"></i></button>
+<!-- -------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------- -->
 
 
-		tombol[0].addEventListener('click',()=>{
-			int2();
-			
-		});
-		tombol[1].addEventListener('click',()=>{
-			int3();
-		});
-	</script>
-		  
 <!-- FIREBASE -->
 	<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 	
@@ -162,25 +188,12 @@
 	};
 	// Initialize Firebase
 	firebase.initializeApp(firebaseConfig);
+    var database = firebase.database();
 	</script>
 
-	<script>
-		var database = firebase.database();
-		let btn1 = document.querySelector('.addData');
-		let createTodo = () => {
-			let todoRef = database.ref('html');
-			let todo = {
-				title:'berhasil3',
-				complete: false
-			};
-			
-			todoRef.push(todo);
-			alert('username '+todo.title+' berhasil ditambahkan')
-		};
-		btn1.addEventListener('click',createTodo)
-	</script>
+	<!-- <script type="text/javascript" src="./component/firebase2.js?114"></script> -->
+	<script type="text/javascript" src="./component/firebase3.js?114"></script>
 <!-- / FIREBASE -->
-
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
