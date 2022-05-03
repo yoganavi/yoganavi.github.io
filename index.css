@@ -1,0 +1,83 @@
+.kontainer{
+    width: 100vw;
+    overflow: hidden;
+    /* height: 50vh; */
+    position: relative;
+}
+.slider{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(26, 201, 113);
+    /* height: 50vh; */
+    z-index: -14;
+    /* height: 100vh; */
+}
+.div1{
+    width: 100vw;
+}
+.div1x{
+    /* transform: translateX(70vw); */
+    width: 100vw;
+    margin-left: -100vw;
+}
+.div1a{
+    /* margin-left: 70vw; */
+
+}
+.div1b{
+    /* transform: translateX(-0vw); */
+    /* margin-left: 70vw; */
+
+}
+.div2{
+    position: absolute;
+    background: red;
+    z-index: 11;
+    width: 50vw;
+    height: 40px;
+    text-align: center;
+    top: 30%;
+}
+.div3{
+    position: absolute;
+    background: red;
+    z-index: 11;
+    width: 50vw;
+    height: 40px;
+    text-align: center;
+}
+.slider img{
+    width: 100%;
+    z-index: 10;
+}
+.tombol{
+    /* background: lightcoral; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 14;
+}
+.slider img:nth-child(1){
+    /* transform: translateX(-20%); */
+    /* width: 50%;     */
+    /* margin-left: -80%; */
+}
+.kanan{
+    background: rgba(23, 99, 99, 0.479);
+    width: 10vw;
+    height: 100%;
+    z-index: 11;
+    position: absolute;
+    bottom: 0;
+}
+.kiri{
+    background: rgba(140, 0, 255, 0.411);
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    right: 0;
+}

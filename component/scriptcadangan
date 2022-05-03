@@ -1,0 +1,73 @@
+if(allP.length == 0){
+		let sectionD=document.querySelector('.sectionD');
+		sectionD.innerHTML='';
+	};
+
+	allP.forEach(function(e){
+		function tipeDanJumlah(nama,selector,jumlah){
+			let tipe = document.querySelector(selector);
+			tipe.innerHTML = '';
+			let newP = document.createElement('p');
+			let newP2 = document.createElement('p');
+			newP.innerText = nama;
+			// jumlahPCimb += parseInt(readAllData[e.parentElement.id].harga);
+			newP2.innerText = 'Rp. '+ new Intl.NumberFormat().format(jumlah);
+			tipe.append(newP);
+			tipe.append(newP2);
+		}
+		// console.log(e.innerText);
+		if(e.innerText == 'cimb'){
+			// cimb.innerHTML = '';
+			// let pCimb2 = document.createElement('p');
+			// pCimb2.innerText = 'CIMB';
+			// jumlahPCimb += parseInt(readAllData[e.parentElement.id].harga);
+			// // pCimb.innerText = 'Rp. '+ new Intl.NumberFormat().format(jumlahPCimb);
+			// pCimb.innerText = 'Rp. '+ new Intl.NumberFormat().format(jumlahPCimb);
+			// cimb.append(pCimb2);
+			// cimb.append(pCimb);
+
+			// let newP2 = document.createElement('p');
+			jumlahPCimb += parseInt(readAllData[e.parentElement.id].harga);
+			// newP2.innerText = 'Rp. '+ new Intl.NumberFormat().format(jumlahPCimb);
+
+			tipeDanJumlah('CIMB TOTAL','.cimb',jumlahPCimb);
+		};
+		if(e.innerText == 'sPaylatter'){
+			// sPaylatter.innerHTML = '';
+			// let psPaylatter2 = document.createElement('p');
+			// psPaylatter2.innerText = 'SPAYLATTER';
+			jumlahPspaylatter += parseInt(readAllData[e.parentElement.id].harga);
+			// psPaylatter.innerText = 'Rp. '+ new Intl.NumberFormat().format(jumlahPspaylatter);
+			// sPaylatter.append(psPaylatter2);
+			// sPaylatter.append(psPaylatter);
+			tipeDanJumlah('SPAYLATTER TOTAL','.sPaylatter',jumlahPspaylatter);
+		};
+		if(e.innerText == 'mega'){
+			// mega.innerHTML = '';
+			// let pmega2 = document.createElement('p');
+			// pmega2.innerText = 'MEGA';
+			jumlahPmega += parseInt(readAllData[e.parentElement.id].harga);
+			// pmega.innerText = 'Rp. '+ new Intl.NumberFormat().format(jumlahPmega);
+			// mega.append(pmega2);
+			// mega.append(pmega);
+
+			tipeDanJumlah('MEGA TOTAL','.mega',jumlahPmega);
+
+		};
+		if(e.innerText == 'gopayLatter'){
+			// gopaylatter.innerHTML = '';
+			// let pgopaylatter2 = document.createElement('p');
+			// pgopaylatter2.innerText = 'GOPAYLATTER';
+			jumlahPgopaylatter += parseInt(readAllData[e.parentElement.id].harga);
+			// pgopaylatter.innerText = 'Rp. '+ new Intl.NumberFormat().format(jumlahPgopaylatter);
+			// gopaylatter.append(pgopaylatter2);
+			// gopaylatter.append(pgopaylatter);
+
+			tipeDanJumlah('GPAYLATTER TOTAL','.gopaylatter',jumlahPgopaylatter);
+		};
+		if(e.innerText == 'ovo'){
+			jumlahPOvo += parseInt(readAllData[e.parentElement.id].harga);
+			tipeDanJumlah('OVO TOTAL','.ovo',jumlahPOvo);
+		};
+	});
+	// console.log(Boolean(wrapD1[0].innerText));	
